@@ -1,17 +1,16 @@
 #pragma once
 #include <thread>
 #include <chrono>
-#include "component.h"
 #include "../include/Logger.h"
 
-class Buzzer: public Component
+class Buzzer
 {
     private:
-       Buzzer(){}
-    
-    public: 
+       Buzzer() = default;
        Buzzer(const Buzzer&) = delete;
-       Buzzer& operator=(const Buzzer&) = delete;
+       Buzzer& operator=(const Buzzer&) = delete;    
+
+    public: 
        static void tone(int delay = 0)
        {
           Logger::getInstance()->log("Sonnage du buzzer");

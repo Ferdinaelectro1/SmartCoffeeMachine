@@ -1,5 +1,6 @@
 #pragma once
-#include "AppState.h"
+
+class AppState;
 
 class Context
 {

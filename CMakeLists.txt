@@ -7,5 +7,10 @@ add_executable(
     main.cpp
     src/Context.cpp
     src/Logger.cpp
+    src/AppState.cpp
+    src/ChooseJus.cpp
+    src/Init.cpp
+    src/Paiement.cpp 
+    src/ReceiveJus.cpp
 )
 

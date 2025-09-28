@@ -1,16 +1,15 @@
 #pragma once
-#include "component.h"
 #include "def.h"
 #include "../include/Logger.h"
 
-class Pompe : public Component
+class Pompe 
 {
     private:
-       Pompe(){}
-
-    public: 
+       Pompe() =  default;
        Pompe(const Pompe&) = delete;
        Pompe& operator=(const Pompe&) = delete;
+
+    public: 
        static void pomper(JusType t)
        {
           Logger::getInstance()->log("Pompage");

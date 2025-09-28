@@ -1,15 +1,15 @@
 #pragma once
 #include <iostream>
-#include "component.h"
 #include "../include/Logger.h"
 
-class Ecran : public Component
+class Ecran 
 {
     private: 
-       Ecran(){}
-    public: 
+       Ecran() = default;
        Ecran(const Ecran&) = delete;
        Ecran& operator=(const Ecran&) = delete;
+
+    public: 
        static void Print(const std::string &msg)
        {
            Logger::getInstance()->log("Appel Écran");

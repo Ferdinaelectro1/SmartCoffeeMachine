@@ -1,4 +1,5 @@
 #include "../include/Context.h"
+#include "../include/AppState.h"
 
 Context::Context(AppState *init):_current(init){
 
@@ -11,7 +12,8 @@ Context::~Context()
 
 void Context::setState(AppState *state)
 {
-    delete _current;
+    if(_current != state)//eviter la double libération de mémoire
+        delete _current;
     _current = state;
 }
 
