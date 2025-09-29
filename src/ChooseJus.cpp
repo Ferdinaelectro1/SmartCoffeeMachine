@@ -5,12 +5,14 @@
 #include "../include/Paiement.h"
 #include "../include/Logger.h"
 #include "../include/Context.h"
+#include "../utils/ecran.h"
 
 void ChooseJus::handle(Context& ctx)
 {
     Logger::getInstance()->log("Chois du jus");
-    std::cout << "Chois du jus" << std::endl; 
-    std::this_thread::sleep_for(std::chrono::seconds(3));
+    system("clear");
+    Ecran::Print("Vous voulez >> ");
+    std::this_thread::sleep_for(std::chrono::seconds(5));    
     ctx.setState(new Paiement());
     ctx.request();
 }

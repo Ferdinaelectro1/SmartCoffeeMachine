@@ -1,6 +1,6 @@
 #pragma once
 
-enum JusType
+enum JusType : int
 {
     ORANGE,
     MANGUE,

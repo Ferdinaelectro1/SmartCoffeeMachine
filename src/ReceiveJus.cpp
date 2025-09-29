@@ -4,10 +4,11 @@
 #include <thread>
 #include "../include/Logger.h"
 #include "../include/Context.h"
+#include "../utils/ecran.h"
 
 void ReceiveJuse::handle(Context &ctx)
 {
     Logger::getInstance()->log("Réception du jus");
-    std::cout << "Réception du jus" << std::endl;
-    std::this_thread::sleep_for(std::chrono::seconds(3));
+    Ecran::AnimeVehicle(0.05);
+;    std::this_thread::sleep_for(std::chrono::seconds(3));
 }
