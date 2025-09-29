@@ -26,6 +26,10 @@ void Init::handle(Context& ctx)
     std::cout << "3 : "<< "CITRON" << std::endl;
     std::cout << "4 : "<< "PAMPLEMOUSE" << std::endl;
     std::cout << "5 : "<< "WATER" << std::endl;
+    char c ;
+    std::cin >> c;
+    int gt = c - '0';
+    ctx.setJusType(getJusType(gt));
     ctx.setState(new ChooseJus());
     ctx.request();
 }

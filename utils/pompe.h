@@ -1,6 +1,7 @@
 #pragma once
 #include "def.h"
 #include "../include/Logger.h"
+#include <iostream>
 
 class Pompe 
 {

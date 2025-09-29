@@ -6,12 +6,13 @@
 #include "../include/Logger.h"
 #include "../include/Context.h"
 #include "../utils/ecran.h"
+#include "../utils/def.h"
 
 void ChooseJus::handle(Context& ctx)
 {
     Logger::getInstance()->log("Chois du jus");
     system("clear");
-    Ecran::Print("Vous voulez >> ");
+    Ecran::Print("Vous voulez >> "+getJusStr(ctx.getJusType()));
     std::this_thread::sleep_for(std::chrono::seconds(5));    
     ctx.setState(new Paiement());
     ctx.request();
